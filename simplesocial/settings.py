@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "bootstrap3",
+    "misaka",
+    # "django_markdown",
+    "braces",
     "accounts",
+    "posts",
+    "groups"
 
 ]
 
