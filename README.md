@@ -1,1 +1,1 @@
-# SImple_social-clone
+# Simple_social-clone
