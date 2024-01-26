@@ -40,7 +40,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "bootstrap3",
+    'django_bootstrap5',
+    "misaka",
+    'crispy_forms',
+    'crispy_bootstrap5',
+    "braces",
     "accounts",
+    "posts",
+    "groups"
 
 ]
 
@@ -120,8 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_REDIRECT_URL ='test'
 LOGOUT_REDIRECT_URL = 'thanks'
@@ -130,3 +137,6 @@ LOGOUT_REDIRECT_URL = 'thanks'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
