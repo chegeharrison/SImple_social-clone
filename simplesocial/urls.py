@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -28,3 +29,5 @@ urlpatterns = [
     path("posts/", include('posts.urls'), name="posts"),
     path("groups/", include('groups.urls'), name='groups'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
