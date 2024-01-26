@@ -15,8 +15,11 @@ class CreateGroup (LoginRequiredMixin, generic.CreateView):
 class SingleGroup(generic.DetailView):
     model = Group
 
-class ListGroup(generic.ListView):
+class ListGroups(generic.ListView):
     model = Group
+    
+    def get_queryset(self):
+        return Group.objects.all()
 
 class JoinGroup(LoginRequiredMixin, generic.RedirectView):
     def get_redirect_url(self, *args, **kwargs):

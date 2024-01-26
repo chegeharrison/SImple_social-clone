@@ -3,7 +3,7 @@ from . import views
 app_name='groups'
 
 urlpatterns = [
-    path('group/', views.ListGroup.as_view(), name='all'),
+    path('group/', views.ListGroups.as_view(), name='all'),
     path('new/', views.CreateGroup.as_view(), name='create'),
     path('post/<slug:slug>/', views.SingleGroup.as_view(), name='single'),
     path('join/<slug:slug>', views.JoinGroup.as_view(), name='join'),

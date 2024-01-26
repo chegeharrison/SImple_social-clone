@@ -1,5 +1,6 @@
 {% extends 'groups/group_base.html' %}
-{% block content %}
+
+{% block pregroup %}
 <div class="col-md-4">
     <div class="content">
         {% if user.is_authenticated %}
@@ -20,20 +21,28 @@
 </div>
 
 {% endblock %}
+
 {% block group_content %}
 <div class="col-md-8">
     <div class="list-group">
         {% for group in object_list %}
-        <a class="list-group-item" href="{% url 'group:single' slug=groupslug %}"></a>
-        <h3 class="title list-group-item-heading">{{group.name}}</h3>
-        <div class="list-group-item-text container-fluid">
-            {{group.description_html|safe}}
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="badge">{{group.post.count }}</span>member{{group.post.count|pluralize}}
+        <a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
+            <h3 class="title list-group-item-heading">{{group.name}}</h3>
+            <div class="list-group-item-text container-fluid">
+                {{group.description_html|safe}}
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="badge">{{group.members.count }}</span>
+                        Member{{group.members.count|pluralize}}
+                    </div>
+
+                    <div class="col-md-4">
+                        <span class="badge" > {{ group.posts.count }}</span>
+                        Post{{ group.posts.count|pluralize }}
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
         {% endfor %}
     </div>
 </div>
