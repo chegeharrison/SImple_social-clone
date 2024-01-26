@@ -1,5 +1,8 @@
+
+
 {% extends "home/base.html" %}
 {% load crispy_forms_filters %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -7,6 +10,7 @@
     <div class="row">
       <div class="col">
         <!-- first part of the grid -->
+        <img src="{% static 'img/undraw_wedding_re_66hj.svg' %}" alt="">
       </div>
       <div class="col">
         <form action="" method="POST" class="loginpage">
