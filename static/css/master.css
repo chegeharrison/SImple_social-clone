@@ -19,6 +19,9 @@ html, body {
     padding: 10px;
    
   }
+  a{
+    text-decoration: none;
+  }
   #note {
     position: absolute;
     color: rgba(249,241,204,1);

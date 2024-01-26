@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "misaka",
     'crispy_forms',
     'crispy_bootstrap5',
-    # "django_markdown",
     "braces",
     "accounts",
     "posts",
