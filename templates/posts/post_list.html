@@ -1,5 +1,7 @@
-{% extends 'posts/post_base.html'%}
+{% extends 'posts/post_base.html' %}
+
 {% block content %}
+
 <div class="col-md-4">
     {% if request.user.is_authenticated %}
     <div class="card card-with-shadow">
@@ -20,16 +22,15 @@
                 <ul class="list-unstyled">
                     {%for other_group in get_other_groups %}
                     <li class="group li-with-bullet"><a href="{% url 'group:single' slug=other_group.group.slug %}"></a></li>
+                    {% endfor %}
 
                 </ul>
             </div>
         </div>
 
     </div>
-
-
-
 {% endblock %}
+
 {% block post_content %}
 <div class="col-md-8">
     {%for post in post_list %}
