@@ -32,12 +32,12 @@
                 {{group.description_html|safe}}
                 <div class="row">
                     <div class="col-md-4">
-                        <span class="badge">{{group.members.count }}</span>
+                        <span class="badge bg-warning text-dark">{{group.members.count }}</span>
                         Member{{group.members.count|pluralize}}
                     </div>
 
                     <div class="col-md-4">
-                        <span class="badge" > {{ group.posts.count }}</span>
+                        <span class="badge bg-warning text-dark">{{ group.posts.count }}</span>
                         Post{{ group.posts.count|pluralize }}
                     </div>
                 </div>

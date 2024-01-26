@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     "misaka",
     'crispy_forms',
+    'crispy_bootstrap5',
     # "django_markdown",
     "braces",
     "accounts",
@@ -138,5 +139,5 @@ LOGOUT_REDIRECT_URL = 'thanks'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
